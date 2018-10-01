@@ -1,0 +1,18 @@
+* {
+  height: 100%;
+}
+
+#mainApp {
+  opacity: 1;
+  background-size: 300% 300%;
+  transition: all 0.3s ease;
+  animation: 2s move;
+  /* animation: GradientMove 80s ease-in infinite; */
+}
+
+/* @keyframes GradientMove { 
+    0%{background-position:10% 70%}
+    20%{background-position:90% 100%}
+    60%{background-position:50% 0%}
+    100%{background-position:10% 70%}
+} */

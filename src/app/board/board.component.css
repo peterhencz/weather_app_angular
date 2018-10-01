@@ -1,0 +1,22 @@
+.board {
+  display: flex;
+  flex-direction: row;
+}
+
+#date {
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  margin: 0em;
+  opacity: 0.8;
+  color: #fff !important;
+  font-size: 2em;
+  z-index: -1;
+  line-height: 1.6em;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h2 {
+  font-size: 1.4em;
+}

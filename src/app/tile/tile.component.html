@@ -1,0 +1,18 @@
+
+<div *ngIf="tiles" class="tiles">
+  <div [@tileAnimation]='tile'
+    *ngFor="let tile of tiles" 
+    (click)="onSelect(tile)" 
+    class="tile shrink">
+      <span class="location">
+        <h2>{{tile.city}}</h2>
+        <h4>{{tile.location}}</h4>
+      </span>
+      <img src="../assets/icons/{{tile.weather[0].icon}}.png" alt="">
+      <div class="temp">
+        <h1>{{tile.weather[0].temp | tempInCelsius : 273 }} °C</h1>
+        <h3>{{tile.weather[0].temp}} °F</h3>
+      </div>
+  </div>
+</div>
+ 

@@ -1,0 +1,8 @@
+<div class="date" id="date">
+  <h2>{{this.date}}</h2>
+</div>
+
+<div class="board">
+  <app-tile (selectedTileEmitter)="selectTile($event)"></app-tile>
+  <app-forecast [selectedTile]="selectedTile"></app-forecast>
+</div>

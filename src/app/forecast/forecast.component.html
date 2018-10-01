@@ -1,0 +1,21 @@
+<div class="forecast-main"> 
+
+  <div *ngIf="forecast" class="forecasts">
+    <div *ngFor="let daily of forecast.weather" class="cica">
+   
+    <div class="daily-info">
+      <div class="info">
+        <h2></h2>
+      </div>
+    </div>
+
+    <div class="forecast-column" [ngStyle]="{'height.vh':daily.temp}" @forecastAnimation>
+      <img src="../assets/white_icons/{{daily.icon}}.png">
+      <h2>{{daily.temp}} °C</h2>
+      <h3>{{daily.date}}H</h3>
+    </div>
+
+    </div>
+  </div>
+
+</div>

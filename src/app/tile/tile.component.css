@@ -1,0 +1,100 @@
+body {
+  margin: auto;
+  width: 100%;
+}
+
+.tiles{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50vw;
+}
+
+.tile {
+  position: relative;
+  width: 20em;
+  height: 5.4em;
+  margin: 0.8em;
+  padding: 1.2em;
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 2.4px;
+  opacity: .71;
+  box-shadow: 0 5px 60px -20px #545454;
+  transition-duration: .4s;
+  cursor: pointer;
+}
+
+.tile::after {
+  content: '';
+  background: white;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: all .4s;
+  transform: scale(1.14);
+}
+
+.tile:active::after {
+  transform: scale(1);
+  padding: 0.6em;
+  margin: 0;
+  opacity: 0.3;
+  transition: 0s;
+}
+
+.temp {
+  display: flex;
+  flex-direction: column;  
+}
+/* 
+.tile, img, .tile:focus {
+  transition: all 1s ease;
+} */
+
+.tile:hover {
+  transform: scale(1.024) perspective(1000px) translate3d(0px, 2px, -2px) rotatex(-2deg);
+  opacity: 0.9;
+  box-shadow: 5px 10px 60px -16px #545454;
+  margin: 0.8em;
+}
+
+.tile:active {
+  opacity: 1;
+  transform: perspective(3000px) translate3d(0px, -1px, 0px) rotateY(2deg) rotatex(2deg);
+  box-shadow: 5px 20px 60px -10px #545454;
+}
+
+a {
+  color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: left;
+}
+
+img {
+  width: 3em;
+  height: 3em;
+}
+
+/* @keyframes bling { 
+    0%{transform: scale(1)}
+    100%{transform: scale(1.2)}
+} */
