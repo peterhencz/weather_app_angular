@@ -16,7 +16,7 @@ export class TileService {
   }
 
   getData(city: string): Observable<JSON> {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=7257dfb135c8fcd4ac3b2fbf49fadc31`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=7257dfb135c8fcd4ac3b2fbf49fadc31`;
     return this.http.get<JSON>(url);
   }
 }
